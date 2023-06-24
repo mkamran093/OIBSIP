@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="display">
+          <input type="text" id="display" value="" readonly />
+        </div>
+
+        <div class="buttons">
+          <div>
+            <input
+              class="operator"
+              type="button"
+              value="&lpar;"
+              onclick="display.value += '\(' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="&rpar;"
+              onclick="display.value += '\)' "
+            />
+            <input
+              id="ans"
+              class="operator"
+              type="button"
+              value="ans"
+              onclick="display.value += answer();"
+            />
+            <input
+              class="operator"
+              type="button"
+              value="del"
+              onclick="display.value = display.value.toString().slice(0, -1) "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="clear"
+              onclick="display.value ='' "
+            />
+          </div>
+          <div>
+            <input
+              class="digit"
+              type="button"
+              value="7"
+              onclick="display.value +='7' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="8"
+              onclick="display.value +='8' "
+            />
+            <input
+              type="button"
+              class="digit"
+              value="9"
+              onclick="display.value +='9' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="%"
+              onclick="display.value +='%' "
+            />
+            <input class="operator" type="button" value="NA" />
+          </div>
+          <div>
+            <input
+              class="digit"
+              type="button"
+              value="4"
+              onclick="display.value +='4' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="5"
+              onclick="display.value +='5' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="6"
+              onclick="display.value +='6' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="x"
+              onclick="display.value +='*' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="/"
+              onclick="display.value += '/' "
+            />
+          </div>
+          <div>
+            <input
+              class="digit"
+              type="button"
+              value="1"
+              onclick="display.value +='1' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="2"
+              onclick="display.value +='2' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="3"
+              onclick="display.value +='3' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="+"
+              onclick="display.value +='+' "
+            />
+            <input
+              class="operator"
+              type="button"
+              value="-"
+              onclick="display.value +='-' "
+            />
+          </div>
+          <div>
+            <input
+              class="operator"
+              type="button"
+              value="."
+              onclick="display.value +='.' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="0"
+              onclick="display.value +='0' "
+            />
+            <input
+              class="digit"
+              type="button"
+              value="00"
+              onclick="display.value +='00' "
+            />
+            <input
+              id="equal"
+              type="button"
+              value="="
+              onclick="display.value = eval(display.value); update()"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

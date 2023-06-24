@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #4c8bc8;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 420px;
+  height: 530px;
+  border: none;
+  border-radius: 20px;
+  background: #ebf5fe;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 30px;
+}
+
+#display {
+  background: #cbe5fe;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 80px;
+  color: #122f55;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  padding: 10px;
+}
+.buttons {
+  margin: 40px 0;
+}
+
+.buttons div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.buttons input {
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.digit {
+  background: #cbe5fe;
+  color: #122f55;
+}
+
+.operator {
+  background: #a2cffa;
+  color: #578cc2;
+}
+
+#equal {
+  width: 135px;
+  background: #4c8bc8;
+  color: #edfbff;
+}
