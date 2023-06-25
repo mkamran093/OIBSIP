@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nichola Tesla</title>
+  </head>
+  <body>
+    <header>
+      <div class="vid">
+        <video
+          id="vid"
+          src="Nikola Tesla - Engineer & Inventor _ Biography.mp4"
+          onclick="playPause()"
+          poster="thumbnail.png"
+        ></video>
+        <div class="titles">
+          <h2>Nichola Tesla</h2>
+          <br />
+          <h3>1856 - 1943</h3>
+        </div>
+        <div class="pause_btn" onclick="playPause()"></div>
+      </div>
+    </header>
+
+    <div class="quote">
+      <img src="tesla.png" alt="" />
+    </div>
+
+    <div class="bio">
+      <h1>BioGraphy</h1>
+      <span
+        >Nikola Tesla (1856-1943) was an acclaimed inventor, electrical
+        engineer, and physicist who played a vital role in the development of
+        modern AC electrical power systems. Born in Croatia, Tesla received his
+        education in engineering and physics in Europe before relocating to the
+        United States. While initially collaborating with Thomas Edison, their
+        differing views led to Tesla pursuing his own projects. Notably, he made
+        groundbreaking contributions to AC power transmission and distribution
+        by introducing the concept of the rotating magnetic field. Tesla held
+        numerous patents, including the Tesla coil used in wireless power
+        transfer and radio technology. He also explored wireless power
+        transmission, wireless communication, and X-ray technology. Despite
+        financial difficulties, Tesla's genius and forward-thinking continue to
+        inspire scientists and engineers. His legacy as a brilliant inventor and
+        pioneer in electrical power systems endures, shaping the modern
+        world.</span
+      >
+    </div>
+
+    <footer>
+      <hr />
+      <span id="foot">Designed by Muhammad Kamran</span>
+    </footer>
+
+    <script>
+      let myVideo = document.getElementById("vid");
+      let pauseBtn = document.querySelector(".pause_btn");
+      let titles = document.querySelector(".titles");
+
+      function playPause() {
+        if (myVideo.paused) {
+          myVideo.play();
+          pauseBtn.style.backgroundImage = "none";
+          titles.remove();
+        } else {
+          myVideo.pause();
+          pauseBtn.style.backgroundImage = "url('play-button-svgrepo-com.svg')";
+          titles.append();
+        }
+      }
+    </script>
+  </body>
+</html>
